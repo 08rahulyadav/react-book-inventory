@@ -22,7 +22,7 @@ function AddBook() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // ✅ Required fields validation (DATE INCLUDED)
+    
     if (
       !form.title ||
       !form.author ||
@@ -34,20 +34,20 @@ function AddBook() {
       return;
     }
 
-    // ✅ Email format validation
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(form.email)) {
       alert("Please enter a valid email address");
       return;
     }
 
-    // ✅ Pages must be a number
+    
     if (isNaN(form.pages)) {
       alert("Pages must be a number");
       return;
     }
 
-    // ✅ API call
+    
     await addBook({
       ...form,
       pages: Number(form.pages)
@@ -60,7 +60,7 @@ function AddBook() {
     <div className="min-h-screen bg-gradient-to-br from-indigo-100 via-white to-indigo-50 flex items-center justify-center p-6">
       <div className="w-full max-w-xl bg-white rounded-xl shadow-lg p-6">
 
-        {/* Back */}
+        
         <button
           onClick={() => navigate("/")}
           className="mb-4 text-sm text-gray-600 hover:text-gray-800"

@@ -35,7 +35,7 @@ function EditBook() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Required fields (DATE INCLUDED)
+    
     if (
       !form.title ||
       !form.author ||
@@ -47,14 +47,14 @@ function EditBook() {
       return;
     }
 
-    // Email validation
+    
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(form.email)) {
       alert("Please enter a valid email address");
       return;
     }
 
-    // Pages number
+    
     if (isNaN(form.pages)) {
       alert("Pages must be a number");
       return;
